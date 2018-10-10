@@ -51,7 +51,7 @@ class NavBar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right className="text-center">
                 <DropdownItem>
-                  Lorion-Epress@hotmail.fr
+                  Lorion-Express@hotmail.fr
                 </DropdownItem>
                 <DropdownItem>
                   06.78.65.65.89
