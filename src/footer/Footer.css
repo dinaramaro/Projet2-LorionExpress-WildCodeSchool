@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background: rgb(5,131,166);
+    background: linear-gradient(90deg, rgba(5,131,166,1) 0%, rgba(0,219,255,1) 50%, rgba(5,131,166,1) 100%);
+    padding-top: 1%;
+}   
+
+
+.list{
+    list-style-type: none;
+
+}
+
+.list-top{
+    font-weight: bold;
+}
+
+html{
+    overflow-x: hidden;
+}
