@@ -1,15 +1,14 @@
 .footer{
     display: flex;
     justify-content: space-around;
-    background: rgb(5,131,166);
-    background: linear-gradient(90deg, rgba(5,131,166,1) 0%, rgba(0,219,255,1) 50%, rgba(5,131,166,1) 100%);
+    background:#0EA94D;
     padding-top: 1%;
 }   
 
 
 .list{
     list-style-type: none;
-
+    text-align: center;
 }
 
 .list-top{
@@ -19,3 +18,8 @@
 html{
     overflow-x: hidden;
 }
+
+.link{
+    color: black;
+}
+
