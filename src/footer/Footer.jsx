@@ -20,23 +20,23 @@ class Footer extends Component {
                         <Col lg="2" md='5' sm="5" xs="8">
                             <ul className="list">
                                 <li className="list-top">Réseaux sociaux</li>
-                                <a href="https://www.facebook.com/wildcodeschool/"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539170706-facebook.png" alt="Logo" /></a>
-                                <a href="https://twitter.com/wildcodeschool"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539166418-twitter.png" alt="Logo" /></a>
-                                <a href="https://www.instagram.com/wildcodeschool/?hl=fr"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539170468-instagram.png" alt="Logo" /></a>
+                                <a href="https://www.facebook.com/wildcodeschool/" target="_blank"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539170706-facebook.png" alt="Logo" /></a>
+                                <a href="https://twitter.com/wildcodeschool" target="_blank"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539166418-twitter.png" alt="Logo" /></a>
+                                <a href="https://www.instagram.com/wildcodeschool/?hl=fr" target="_blank"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539170468-instagram.png" alt="Logo" /></a>
                             </ul>
                         </Col>
 
                         <Col lg="2" md='5' sm="5" xs="8">
                             <ul className="list">
                                 <li className="list-top">Partenaires</li>
-                                <li><a href="https://wildcodeschool.fr" className="link">Wild Code School</a></li>
-                                <li><a href="http://www.bordeaux.fr/o581/office-de-tourisme-et-des-congres-de-bordeaux-metropole" className="link">Office du tourisme</a></li>
+                                <li><a href="https://wildcodeschool.fr" className="link" target="_blank">Wild Code School</a></li>
+                                <li><a href="http://www.bordeaux.fr/o581/office-de-tourisme-et-des-congres-de-bordeaux-metropole" className="link" target="_blank">Office du tourisme</a></li>
                             </ul>
                         </Col>
                         <Col lg="2" md='5' sm="5" xs="8">
                             <ul className="list">
                                 <li className="list-top">Mentions légales</li>
-                                <li>© Lorion Express</li>
+                                <li><a href="https://odyssey.wildcodeschool.fr/users/4918" className="link" target="_blank">© Lorion Express</a></li>
                                 <li></li>
                             </ul>
                         </Col>
