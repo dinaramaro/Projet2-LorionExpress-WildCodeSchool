@@ -1,0 +1,25 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background:#0EA94D;
+    padding-top: 1%;
+}   
+
+
+.list{
+    list-style-type: none;
+    text-align: center;
+}
+
+.list-top{
+    font-weight: bold;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.link{
+    color: black;
+}
+
