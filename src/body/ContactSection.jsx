@@ -8,6 +8,7 @@ class ContactSection extends Component {
         return (
             <section id="contact">
                 <Container>
+                    <hr />
                     <Row className="align-items-center">
                         <Col md="6">
                             <h2>Lorion'Express</h2>
