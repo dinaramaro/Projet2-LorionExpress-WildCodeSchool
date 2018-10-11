@@ -5,7 +5,8 @@ import {
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption
+    CarouselCaption,
+    
   } from 'reactstrap';
   
   const items = [
@@ -26,7 +27,7 @@ import {
     }
   ];
   
-  class Carousel extends React.Component {
+  class CarouselPromo extends React.Component {
     constructor(props) {
       super(props);
       this.state = { activeIndex: 0 };
@@ -92,4 +93,4 @@ import {
       );
     }
   }
-export default Carousel;
+export default CarouselPromo;

@@ -1,7 +1,7 @@
 .footer{
     display: flex;
     justify-content: space-around;
-    background:#0EA94D;
+    background:rgb(33, 162, 194);
     padding-top: 1%;
 }   
 

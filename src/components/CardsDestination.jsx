@@ -8,7 +8,7 @@ import './Card.css';
 const CardsDestination = ({item}) => {
   return (
 
-    <Card className="text-center h-100 card">
+    <Card className="text-center h-100">
       <CardTitle>{item.cardtitle}</CardTitle>
       <CardSubtitle>{item.cardsubtitle}</CardSubtitle>
       
