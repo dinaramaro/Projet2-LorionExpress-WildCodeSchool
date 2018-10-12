@@ -4,7 +4,7 @@
     overflow: hidden;
     }
 
-.image1:hover {
+.image-zoom:hover {
         transform:scale(1.25);
         transition: 2s;
         }
