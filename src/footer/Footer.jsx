@@ -5,10 +5,10 @@ import { Container, Row, Col } from 'reactstrap';
 class Footer extends Component {
     render() {
         return (
-            <div>
+            <div className='marge'>
                 <Container fluid >
                     <Row className='footer'>
-                        <Col lg="2" md='5' sm="5" xs="8">
+                        <Col lg="2" md='6' sm="6" xs="12">
                             <ul className="list">
                                 <li className="list-top">Section</li>
                                 <li><a href="#destinations" className="link">Destinations</a></li>
@@ -17,7 +17,7 @@ class Footer extends Component {
                             </ul>
                         </Col>
 
-                        <Col lg="2" md='5' sm="5" xs="8">
+                        <Col lg="2" md='6' sm="6" xs="12">
                             <ul className="list">
                                 <li className="list-top">Réseaux sociaux</li>
                                 <a href="https://www.facebook.com/wildcodeschool/" target="_blank" rel="noopener noreferrer"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539170706-facebook.png" alt="Logo" /></a>
@@ -26,14 +26,14 @@ class Footer extends Component {
                             </ul>
                         </Col>
 
-                        <Col lg="2" md='5' sm="5" xs="8">
+                        <Col lg="2" md='6' sm="6" xs="12">
                             <ul className="list">
                                 <li className="list-top">Partenaires</li>
                                 <li><a href="https://wildcodeschool.fr" className="link" target="_blank" rel="noopener noreferrer">Wild Code School</a></li>
                                 <li><a href="http://www.bordeaux.fr/o581/office-de-tourisme-et-des-congres-de-bordeaux-metropole" className="link" target="_blank" rel="noopener noreferrer">Office du tourisme</a></li>
                             </ul>
                         </Col>
-                        <Col lg="2" md='5' sm="5" xs="8">
+                        <Col lg="2" md='6' sm="6" xs="12">
                             <ul className="list">
                                 <li className="list-top">Mentions légales</li>
                                 <li><a href="https://odyssey.wildcodeschool.fr/users/4918" className="link" target="_blank" rel="noopener noreferrer">© Lorion Express</a></li>
