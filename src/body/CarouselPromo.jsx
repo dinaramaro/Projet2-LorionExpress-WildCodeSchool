@@ -17,13 +17,13 @@ import {
     },
     {
       src: 'https://sustainable-solutions.info/wp-content/uploads/2014/09/lake-reflection-1920x500.jpg',
-      altText: 'Découvrez des endroits incoyable !',
-      caption: 'Découvrez des endroits incroyable !'
+      altText: 'Découvrez des endroits incroyables !',
+      caption: 'Découvrez des endroits incroyables !'
     },
     {
       src: 'http://lesparisiennes-scpo.fr/2012/wp-content/uploads/2012/12/tour-eiffel-partenariats-1920x500.png',
-      altText: 'Découvrez la ville sous un nouveaux jour',
-      caption: 'Découvrez la ville sous un nouveaux jour'
+      altText: 'Découvrez la ville sous un nouveau jour',
+      caption: 'Découvrez la ville sous un nouveau jour'
     }
   ];
   
