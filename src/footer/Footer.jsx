@@ -10,7 +10,7 @@ class Footer extends Component {
                     <Row className='footer'>
                         <Col lg="2" md='6' sm="6" xs="12">
                             <ul className="list">
-                                <li className="list-top">Section</li>
+                                <li className="list-top">Sections</li>
                                 <li><a href="#destinations" className="link">Destinations</a></li>
                                 <li><a href="#experiences" className="link">Expériences</a></li>
                                 <li><a href="#promotions" className="link">Promotions du mois</a></li>
