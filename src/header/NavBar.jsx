@@ -37,13 +37,13 @@ class NavBar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className="text-dark" href="#destinations">Destinations</NavLink>
+                <NavLink className="text-dark" href="/#destinations">Destinations</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-dark" href="#experiences">Expériences</NavLink>
+                <NavLink className="text-dark" href="/#experiences">Expériences</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-dark" href="#promotions">Promotions</NavLink>
+                <NavLink className="text-dark" href="/#promotions">Promotions</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle className="text-dark" nav caret>
