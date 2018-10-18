@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, {Component} from 'react';
 import {
     Carousel,
     CarouselItem,
@@ -11,23 +10,20 @@ import {
   
   const items = [
     {
-      src: 'https://www.lifestorage.com/blog/wp-content/uploads/2018/01/life-storage-best-places-to-live-in-texas-d-1920x500.jpg',
-      altText: 'Voyagez au Texas',
-      caption: 'Voyagez au Texas'
+      src: 'http://www.voyagez-malin.net/wp-content/uploads/2018/04/Venise-Le-grand-canal-1920x500-1920x500.jpg',
+      altText: 'Le grand Canal de Venise'
     },
     {
-      src: 'https://tripconnexion.com/wp-content/uploads/2017/04/meilleurs-sites-madagascar-agence-voyage-locale-madacameleon-2-1.jpg',
-      altText: 'Découvrez des endroits incroyables !',
-      caption: 'Découvrez des endroits incroyables !'
+      src: 'http://www.toulouse.aeroport.fr/sites/default/files/venise_destination_header_1.jpg',
+      altText: 'Les gondoles de Venise'
     },
     {
-      src: 'https://tripconnexion.com/images/upload/agence-voyage-locale-costa-rica-best-destination-decouvertes_16897.jpg',
-      altText: 'Découvrez la ville sous un nouveau jour',
-      caption: 'Découvrez la ville sous un nouveau jour'
+      src: 'https://www.aubergesdejeunesse.com/city_images/Italy/venice.jpg',
+      altText: 'Le quartier San Marco Venise'
     }
   ];
   
-  class CarouselPromo extends React.Component {
+  class CarouselVoyage extends Component {
     constructor(props) {
       super(props);
       this.state = { activeIndex: 0 };
@@ -93,4 +89,4 @@ import {
       );
     }
   }
-export default CarouselPromo;
+export default CarouselVoyage;

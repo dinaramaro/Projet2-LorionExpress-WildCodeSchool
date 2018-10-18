@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
+import CarouselVoyage from './components-detailvoyage/CarouselVoyage';
+import Navbarvoyage from './components-detailvoyage/Navbarvoyage';
+import Tips from './components-detailvoyage/Tips';
+import Programme from './components-detailvoyage/Programme';
+
 
 class DetailVoyage extends Component {
     render () {
         return (
             <div>
-                <h1>Test titre detail voyage</h1>
+                <CarouselVoyage />
+                <Navbarvoyage/>
+                <Tips />
+                <Programme />
+              
             </div>
         )
     }
