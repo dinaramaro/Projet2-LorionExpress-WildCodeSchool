@@ -1,14 +1,14 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
-import {Link} from 'react-router-dom';
+import BtnNav from './BtnNav';
+
 
 class CreationVoyage extends React.Component {
   render() {
     return (
         <div>
             <div className="text-center">
-                <Link to="/admin"><Button className='mr-4 mt-4 mb-4' color="secondary" size="lg">Espace Voyages</Button></Link>
-                <Link to="/adminclient"><Button color="secondary" size="lg">Espace clients</Button></Link>
+                <BtnNav />
                 <h2>Créer voyages</h2>
             </div>
 
