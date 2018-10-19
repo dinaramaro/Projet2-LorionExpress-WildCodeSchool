@@ -4,7 +4,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  Container } from 'reactstrap';
+  Container,
+  Button } from 'reactstrap';
   import './Navbarvoyage.css';
 
 class Navbarvoyage extends Component {
@@ -23,8 +24,8 @@ class Navbarvoyage extends Component {
               <NavItem className="center price">
                 549€
               </NavItem>
+              <Button onClick={ () => this.props.action()} href='#test' color="success">Je réserve</Button>
             </Nav>
-      
         </Navbar>
       </Container>
     );

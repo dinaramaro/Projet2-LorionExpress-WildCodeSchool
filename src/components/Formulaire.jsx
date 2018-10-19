@@ -10,9 +10,7 @@ class Formulaire extends Component {
             email: '',
             class: '',
             boutonCGV: false,
-            collapse: false,
         }
-        this.toggle = this.toggle.bind(this);
         this.alertForm = this.alertForm.bind(this)
         this.changeInput = this.changeInput.bind(this)
         this.buttonCGV = this.buttonCGV.bind(this)
@@ -34,9 +32,7 @@ class Formulaire extends Component {
             alert(message)
         }
     }
-    toggle() {
-        this.setState({ collapse: !this.state.collapse });
-    }
+   
 
     changeInput = (e) => {
         this.setState({ [e.target.name]: e.target.value });
@@ -52,9 +48,9 @@ class Formulaire extends Component {
         return (
             <Container>
                 <div className='center'>
-                <Button color="success" onClick={this.toggle} style={{ marginBottom: '1rem' }}  >Je réserve</Button>
+                <Button color="success" onClick={this.props.action} style={{ marginBottom: '1rem' }} id='test' >Je réserve</Button>
                 </div>
-                <Collapse isOpen={this.state.collapse}>
+                <Collapse isOpen={this.props.collapse}>
                     <Form>
                         <Row form>
                             <Col  lg={{ size: 6, offset: 3 }}>
@@ -67,7 +63,7 @@ class Formulaire extends Component {
                                     />
                                 </FormGroup>
                                 <FormGroup>
-                                    <Label className={this.state.class} for="exampleEmail">Email</Label>
+                                    <Label className={this.state.class} for="exampleEmail" >Email</Label>
                                     <Input type="text" name="email" id="exampleEmail"
                                         placeholder="Votre email ici"
                                         onChange={this.changeInput}
