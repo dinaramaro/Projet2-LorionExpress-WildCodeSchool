@@ -24,7 +24,7 @@ class Navbarvoyage extends Component {
               <NavItem className="center price">
                 549€
               </NavItem>
-              <Button onClick={ () => this.props.action()} href='#test' color="success">Je réserve</Button>
+              <Button onClick={this.props.action} href='#formulaire' color="success">Je réserve</Button>
             </Nav>
         </Navbar>
       </Container>

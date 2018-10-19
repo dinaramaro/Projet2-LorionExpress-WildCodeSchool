@@ -48,7 +48,7 @@ class Formulaire extends Component {
         return (
             <Container>
                 <div className='center'>
-                <Button color="success" onClick={this.props.action} style={{ marginBottom: '1rem' }} id='test' >Je réserve</Button>
+                <Button color="success" onClick={this.props.action} style={{ marginBottom: '1rem' }} id='formulaire' >Je réserve</Button>
                 </div>
                 <Collapse isOpen={this.props.collapse}>
                     <Form>
