@@ -1,9 +1,10 @@
 .tips {
 
     border: 1px solid white;
-    background-color: #61969b;
+    background-color: rgb(34, 179, 215);
     padding : 20px;
     color: white;
+    border-radius: 12px;
     
 }
 
