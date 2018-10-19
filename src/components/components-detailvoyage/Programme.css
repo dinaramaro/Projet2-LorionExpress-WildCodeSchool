@@ -1,0 +1,15 @@
+.tablecontent {
+    margin-top : 30px;
+}
+
+.jour {
+    color : #61959D;
+    font-weight: bold;
+}
+
+.descriptif {
+    color : #bc2c32;
+    font-style : italic;
+    font-weight: bold;
+    padding : 20px;
+}
