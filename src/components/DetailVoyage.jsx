@@ -11,14 +11,10 @@ class DetailVoyage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            collapse: false
         }
-        this.toggle = this.toggle.bind(this)
     }
 
-    toggle() {
-        this.setState({ collapse: !this.state.collapse });
-    }
+
 
     componentDidMount(){
         window.scrollTo(0,0)
@@ -27,10 +23,10 @@ class DetailVoyage extends Component {
         return (
             <div>
                 <CarouselVoyage />
-                <Navbarvoyage action={this.toggle} collapse={this.state.collapse}/>
+                <Navbarvoyage />
                 <Tips />
                 <Programme />
-                <Formulaire action={this.toggle} collapse={this.state.collapse}/>
+                <Formulaire />
 
             </div>
         )
