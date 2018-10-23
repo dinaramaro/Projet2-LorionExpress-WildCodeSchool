@@ -4,6 +4,7 @@ import {
   CardTitle, CardSubtitle, Button, Col
 } from 'reactstrap';
 import './Card.css';
+import {Link} from 'react-router-dom';
 
 const CardsDestination = (props) => {
   return (
@@ -18,7 +19,11 @@ const CardsDestination = (props) => {
      
       <CardBody h-100>
         <CardText className="text-left">{props.cardtext}</CardText>
-        <div className="align-items-center"><Button className="button">Plus d'infos'</Button> <p className="prix">{props.prix}</p></div>
+        <div className="align-items-center">
+        <Link to="/detailvoyage">
+        <Button className="button">Plus d'infos</Button> 
+        </Link>
+        <p className="prix">{props.prix}</p></div>
       </CardBody>
     </Card>
 </Col>

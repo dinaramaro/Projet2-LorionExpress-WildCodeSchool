@@ -12,7 +12,7 @@ const CardsExp = (props) => {
                 </div>
                 <CardBody>
                     <CardTitle>{props.theme}</CardTitle>
-                    <CardText>{props.text}</CardText>
+                    <CardText>{props.cardtext}</CardText>
                     <Bouton />
                 </CardBody>
             </Card>

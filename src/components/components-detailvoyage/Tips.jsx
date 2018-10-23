@@ -14,7 +14,7 @@ class Tips extends Component {
                         <img className="icon" src="http://image.noelshack.com/fichiers/2018/42/3/1539797156-noun-quote.png" alt="icon"/><p>Un circuit à la découverte de Venise et ses gondoles, ses canaux, ses ruelles... une ville magique sur l'eau qui ne laissera personne de marbre.</p>
                     </div>
                 </Col>
-                <Col xs="12" md="5">
+                <Col xs="12" md="5" className='pr-0'>
                     <div className="tips">
                         <h3>Nos recommandations</h3>
                         <ul>

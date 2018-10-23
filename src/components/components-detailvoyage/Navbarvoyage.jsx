@@ -4,8 +4,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  Button, Container } from 'reactstrap';
+  Container,
+  } from 'reactstrap';
   import './Navbarvoyage.css';
+  import Formulaire from '../Formulaire'
 
 class Navbarvoyage extends Component {
    
@@ -13,9 +15,7 @@ class Navbarvoyage extends Component {
     return (
       <Container className="pad">
         <Navbar light expand="md nav" >
-          <NavbarBrand className="brand">Venise</NavbarBrand>
-         
-         
+          <NavbarBrand className="brand">Venise</NavbarBrand>         
             <Nav className="ml-auto" navbar>
               <NavItem className="center date">
                   Du 12 au 16 février 2019
@@ -23,9 +23,8 @@ class Navbarvoyage extends Component {
               <NavItem className="center price">
                 549€
               </NavItem>
-              <Button>Réserver</Button>
+              <Formulaire />             
             </Nav>
-      
         </Navbar>
       </Container>
     );

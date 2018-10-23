@@ -22,9 +22,9 @@ class App extends Component {
           <Route exact path="/" component={Wrapper} />
           <Route path="/detailvoyage" component={DetailVoyage} />
           <Route path="/admin" component={Admin} />
-          <Route path="/admin/client" component={AdminClient} />
+          <Route path="/adminclient" component={AdminClient} />
           <Route path="/admin/voyage" component={AdminVoyage} />
-          <Route path="/admin/creation-voyage" component={CreationVoyage} />
+          <Route path="/admincreation-voyage" component={CreationVoyage} />
           <Route path="/admin/modification-voyage" component={ModificationVoyage} />
 
         </Switch>

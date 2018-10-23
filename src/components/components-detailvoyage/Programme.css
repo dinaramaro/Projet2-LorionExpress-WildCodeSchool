@@ -3,13 +3,14 @@
 }
 
 .jour {
-    color : #61959D;
+    color : rgb(33, 162, 194);
     font-weight: bold;
 }
 
 .descriptif {
-    color : #bc2c32;
+    color : rgb(37,194,233);
     font-style : italic;
     font-weight: bold;
     padding : 20px;
 }
+

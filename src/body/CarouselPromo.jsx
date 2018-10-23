@@ -73,8 +73,10 @@ import {
             onExited={this.onExited}
             key={item.src}
           >
-            <img className="img-fluid" src={item.src} alt={item.altText} />
+           <img className="img-fluid" src={item.src} alt={item.altText} />
             <CarouselCaption captionHeader={item.caption} />
+            
+
           </CarouselItem>
         );
       });
