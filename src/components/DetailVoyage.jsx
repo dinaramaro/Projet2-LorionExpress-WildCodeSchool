@@ -8,12 +8,6 @@ import Formulaire from './Formulaire';
 
 
 class DetailVoyage extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-        }
-    }
-
 
 
     componentDidMount(){

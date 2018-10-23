@@ -67,23 +67,23 @@ class Formulaire extends Component {
                         <Form>
           
                                     <FormGroup>
-                                        <Label className={this.state.class} for="Name" required>Nom et Prénom </Label>
-                                        <Input type="text" name="name"
-                                            id="name"
+                                        <Label className={this.state.class} for="nom" required>Nom et Prénom </Label>
+                                        <Input type="text" name="nom"
+                                            id="nom"
                                             placeholder="Renseignez votre Nom et Prénom"
                                             onChange={this.changeInput}
                                         />
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label className={this.state.class} for="exampleEmail" >Email</Label>
-                                        <Input type="text" name="email" id="exampleEmail"
+                                        <Label className={this.state.class} for="email" >Email</Label>
+                                        <Input type="text" name="email" id="email"
                                             placeholder="Votre email ici"
                                             onChange={this.changeInput}
                                         />
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label for="exampleSelect">Nombres de voyageurs</Label>
-                                        <Input type="select" name="select" id="exampleSelect">
+                                        <Label for="personne">Nombres de voyageurs</Label>
+                                        <Input type="select" name="personne" id="personne">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
@@ -92,13 +92,13 @@ class Formulaire extends Component {
                                         </Input>
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label for="exampleText">Commentaires</Label>
-                                        <Input type="textarea" name="text" id="exampleText" />
+                                        <Label for="commentaire">Commentaires</Label>
+                                        <Input type="textarea" name="commentaire" id="commentaire" />
                                     </FormGroup>
 
                                     <FormGroup>
-                                        <Label for="idVoyage">Numéro du Voyage</Label>
-                                        <Input type="idVoyage" name="idVoyage" id="idVoyage" placeholder='5830385' disabled />
+                                        <Label for="voyage">Numéro du Voyage</Label>
+                                        <Input type="idVoyage" name="voyage" id="voyage" placeholder='5830385' disabled />
                                     </FormGroup>
                                     <FormGroup check>
                                         <Label check>

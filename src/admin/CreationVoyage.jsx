@@ -15,53 +15,53 @@ class CreationVoyage extends React.Component {
         <Container>
             <Form >
                 <FormGroup>
-                    <Label for="exampleEmail">Titre</Label>
-                    <Input type="text" name="email" id="exampleEmail" placeholder="Paris" />
+                    <Label for="title">Titre</Label>
+                    <Input type="text" name="title" id="title" placeholder="Paris" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Image</Label>
-                    <Input type="text" name="image" id="exampleEmail" placeholder="url" />
+                    <Label for="image">Image</Label>
+                    <Input type="text" name="image" id="image" placeholder="url" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Description</Label>
-                    <Input type="textarea" name="description" id="exampleEmail" placeholder="Description" />
+                    <Label for="description">Description</Label>
+                    <Input type="textarea" name="description" id="description" placeholder="description" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Details</Label>
-                    <Input type="textarea" name="details" id="exampleEmail" placeholder="Details" />
+                    <Label for="detail">Details</Label>
+                    <Input type="textarea" name="detail" id="detail" placeholder="Detail" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Date de départ</Label>
-                    <Input type="text" name="datededepart" id="exampleEmail" placeholder="12/09/2018" />
+                    <Label for="date-depart">Date de départ</Label>
+                    <Input type="text" name="date-depart" id="date-depart" placeholder="12/09/2018" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Date de retour</Label>
-                    <Input type="text" name="datederetour" id="exampleEmail" placeholder="15/09/2018" />
+                    <Label for="date-retour">Date de retour</Label>
+                    <Input type="text" name="date-retour" id="date-retour" placeholder="15/09/2018" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Prix</Label>
-                    <Input type="text" name="prix" id="exampleEmail" placeholder="999" />
+                    <Label for="prix">Prix</Label>
+                    <Input type="text" name="prix" id="prix" placeholder="999" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Astuces</Label>
-                    <Input type="textarea" name="astuces" id="exampleEmail" placeholder="Visitez la plage de sable fin" />
+                    <Label for="astuces">Astuces</Label>
+                    <Input type="textarea" name="astuces" id="astuces" placeholder="Visitez la plage de sable fin" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Lieu</Label>
-                    <Input type="text" name="lieu" id="exampleEmail" placeholder="Rome" />
+                    <Label for="lieu">Lieu</Label>
+                    <Input type="text" name="lieu" id="lieu" placeholder="Rome" />
                 </FormGroup>
 
                 <FormGroup>
-                    <Label for="exampleEmail">Type</Label>
-                    <Input type="text" name="type" id="exampleEmail" placeholder="Destination" />
+                    <Label for="type">Type</Label>
+                    <Input type="text" name="type" id="type" placeholder="Destination" />
                 </FormGroup>
                 <div className='text-center'>
                 <Button>Créer</Button>
