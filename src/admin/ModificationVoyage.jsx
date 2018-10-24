@@ -7,16 +7,65 @@ class ModificationVoyage extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            voyage : [],
+            title: "",
+            image: "",
+            description: "",
+            detail: "",
+            "date-depart": "",
+            "date-retour": "",
+            prix: "",
+            astuces: "",
+            lieu: "",
+            type: "",
         }
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const config = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(this.state)
+        }
+        fetch(`http://92.175.11.66:3000/reacteurs/api/voyages/${this.props.match.params.id}`, config)
+        .then (res => res.text())
+        .then (res => {
+            if (res.error) {
+                alert(res.error)
+            } else {
+                window.location.href="/admin"
+            }
+        }).catch(e => {
+            console.error(e);
+            alert('Erreur lors de la modification du voyage')
+        })
     }
 
     componentDidMount(){
+        window.scrollTo(0,0);
         fetch(`http://92.175.11.66:3000/reacteurs/api/voyages/${this.props.match.params.id}`)
             .then(response => response.json())
                 .then(data => 
                     this.setState({
-                        voyage : data,
+                        title: data.title,
+                        image: data.image,
+                        description: data.description,
+                        detail: data.detail,
+                        "date-depart": data["date-depart"],
+                        "date-retour": data["date-retour"],
+                        prix: data.prix,
+                        astuces: data.astuces,
+                        lieu: data.lieu,
+                        type: data.type,
                     }))
     }
 
@@ -31,65 +80,79 @@ class ModificationVoyage extends React.Component {
             </div>
 
         <Container>
-            <Form >
-                <FormGroup>
-                    <Label for="title">Titre</Label>
-                    <Input type="text" name="title" id="title" value={this.state.voyage.title}/>
-                </FormGroup>
+        <Form onSubmit={this.handleSubmit}>
+                        <FormGroup>
+                            <Label for="title">Titre</Label>
+                            <Input onChange={this.handleChange}
+                                type="text"
+                                name="title"
+                                id="title"
+                                value={this.state.title} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="image">Image</Label>
-                    <Input type="text" name="image" id="image" value={this.state.voyage.image}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="image">Image</Label>
+                            <Input
+                                onChange={this.handleChange}
+                                type="text"
+                                name="image"
+                                id="image"
+                                value={this.state.image} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="description">Description</Label>
-                    <Input type="textarea" name="description" id="description" value={this.state.voyage.description}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="description">Description</Label>
+                            <Input onChange={this.handleChange} type="textarea" name="description" id="description" 
+                                value={this.state.description} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="detail">Details</Label>
-                    <Input type="textarea" name="detail" id="detail" value={this.state.voyage.detail}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="detail">Details</Label>
+                            <Input onChange={this.handleChange} type="textarea" name="detail" id="detail" 
+                                value={this.state.detail} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="date-depart">Date de départ</Label>
-                    <Input type="text" name="date-depart" id="date-depart" value={this.state.voyage["date-depart"]}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="date-depart">Date de départ</Label>
+                            <Input onChange={this.handleChange} type="text" name="date-depart" id="date-depart" 
+                                value={this.state["date-depart"]} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="date-retour">Date de retour</Label>
-                    <Input type="text" name="date-retour" id="date-retour" 
-                    value={this.state.voyage["date-retour"]}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="date-retour">Date de retour</Label>
+                            <Input onChange={this.handleChange} type="text" name="date-retour" id="date-retour" 
+                                value={this.state["date-retour"]} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="prix">Prix</Label>
-                    <Input type="text" name="prix" id="prix" 
-                    value={this.state.voyage.prix}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="prix">Prix</Label>
+                            <Input onChange={this.handleChange} type="text" name="prix" id="prix" 
+                                value={this.state.prix} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="astuces">Astuces</Label>
-                    <Input type="textarea" name="astuces" id="astuces" 
-                    value={this.state.voyage.astuces}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="astuces">Astuces</Label>
+                            <Input onChange={this.handleChange} type="textarea" name="astuces" id="astuces" 
+                                value={this.state.astuces} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="lieu">Lieu</Label>
-                    <Input type="text" name="lieu" id="lieu"
-                    value={this.state.voyage.lieu}/>
-                </FormGroup>
+                        <FormGroup>
+                            <Label for="lieu">Lieu</Label>
+                            <Input onChange={this.handleChange} type="text" name="lieu" id="lieu"
+                                value={this.state.lieu} />
+                        </FormGroup>
 
-                <FormGroup>
-                    <Label for="type">Type</Label>
-                    <Input type="text" name="type" id="type"
-                    value={this.state.voyage.type}/>
-                </FormGroup>
-                <div className='text-center'>
-                <Button>Modifier</Button>
-                </div>
-            </Form>
+                        <FormGroup>
+                            <Label for="type">Type</Label>
+                            <Input onChange={this.handleChange} type="select" name="type" id="type" placeholder="Destination" >
+                                <option value="destination" >Destination</option>
+                                <option value="experience">Experience</option>
+                            </Input>
+                        </FormGroup>
+                        <div className='text-center'>
+                            <Button color="primary">Modifier</Button>
+                        </div>
+                    </Form>
         </Container>
     </div>
     );

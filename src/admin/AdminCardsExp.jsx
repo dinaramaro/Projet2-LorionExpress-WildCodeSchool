@@ -16,7 +16,7 @@ const AdminCardsExp = (props) => {
                     <Link to={`/adminmodification-voyage/${props.id}`}>
                         <Button className="button" color="primary">Modifier</Button>
                     </Link>
-                    <Link to="/detailvoyage">
+                    <Link to={`/adminsuppression-voyage/${props.id}`}>
                         <Button className="button" color="danger">Supprimer</Button>
                     </Link>                
                     </CardBody>
