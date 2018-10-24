@@ -20,13 +20,12 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Wrapper} />
-          <Route path="/detailvoyage" component={DetailVoyage} />
+          <Route path="/detailvoyage/:id" component={DetailVoyage} />
           <Route path="/admin" component={Admin} />
           <Route path="/adminclient" component={AdminClient} />
           <Route path="/admin/voyage" component={AdminVoyage} />
           <Route path="/admincreation-voyage" component={CreationVoyage} />
-          <Route path="/admin/modification-voyage" component={ModificationVoyage} />
-
+          <Route path="/adminmodification-voyage/:id" component={ModificationVoyage} />
         </Switch>
         
         <Footer />

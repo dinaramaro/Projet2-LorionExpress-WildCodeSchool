@@ -10,7 +10,7 @@ import {
   
   const items = [
     {
-      src: 'http://www.voyagez-malin.net/wp-content/uploads/2018/04/Venise-Le-grand-canal-1920x500-1920x500.jpg',
+      src: "http://www.toulouse.aeroport.fr/sites/default/files/venise_destination_header_1.jpg",
       altText: 'Le grand Canal de Venise'
     },
     {
