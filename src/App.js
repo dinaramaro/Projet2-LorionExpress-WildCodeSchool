@@ -10,6 +10,7 @@ import AdminClient from './admin/AdminClient';
 import AdminVoyage from './admin/AdminVoyage';
 import CreationVoyage from './admin/CreationVoyage';
 import ModificationVoyage from './admin/ModificationVoyage';
+import SuppressionVoyage from './admin/SuppressionVoyage';
 
 
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path="/admin/voyage" component={AdminVoyage} />
           <Route path="/admincreation-voyage" component={CreationVoyage} />
           <Route path="/adminmodification-voyage/:id" component={ModificationVoyage} />
+          <Route path="/adminsuppression-voyage/:id" component={SuppressionVoyage} />
         </Switch>
         
         <Footer />

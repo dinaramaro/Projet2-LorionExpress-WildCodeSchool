@@ -6,16 +6,20 @@ class Formulaire extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
+            nom: '',
             email: '',
-            class: '',
-            boutonCGV: false,
-            modal: false
+            personne: '',
+            commentaire: '',
+            voyage: this.props.id,
+           /*  boutonCGV: false, */
+            modal: false,
+           /*  class : '' */
         }
-        this.alertForm = this.alertForm.bind(this)
-        this.changeInput = this.changeInput.bind(this)
-        this.buttonCGV = this.buttonCGV.bind(this)
+        /* this.alertForm = this.alertForm.bind(this); */
+        this.handleChange = this.handleChange.bind(this);
+      /*   this.buttonCGV = this.buttonCGV.bind(this); */
         this.toggle = this.toggle.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
     }
 
@@ -27,7 +31,7 @@ class Formulaire extends Component {
     }
 
 
-    alertForm() {
+  /*   alertForm() {
         if (this.state.name.length > 0 && this.state.email.length > 0 && !this.state.boutonCGV === false) {
             let message = "Votre réservation a bien été prise en compte, merci.";
             this.setState({
@@ -42,18 +46,46 @@ class Formulaire extends Component {
             let message = 'Merci de remplir tout les champs obligatoires';
             alert(message)
         }
-    }
+    } */
 
-
-    changeInput = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
-    }
-
-    buttonCGV() {
+  /*   buttonCGV() {
         this.setState({
             boutonCGV: !this.state.bouttonCGV
         })
     }
+ */
+    handleChange(e) {
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        fetch('http://92.175.11.66:3000/reacteurs/api/clients', {
+            method : "POST",
+            headers : {
+                "Content-Type" : "application/json"
+            },
+            body : JSON.stringify({
+                nom: this.state.nom,
+                email: this.state.nom,
+                personne: this.state.nom,
+                commentaire: this.state.nom,
+                voyage: this.state.voyage
+            })
+        }) .then(res => res.json())
+        .then (res => {
+            if (res.error) {
+                alert(res.error)
+            } else {
+                alert(this.state)
+                window.location.href="/"
+            }
+        }).catch(e => {
+            console.error(e);
+            alert('Erreur lors de la réservation du voyage')
+        })
+    }
+
 
     render() {
         return (
@@ -64,66 +96,75 @@ class Formulaire extends Component {
                 </div>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalBody>
-                        <Form>
-          
-                                    <FormGroup>
-                                        <Label className={this.state.class} for="nom" required>Nom et Prénom </Label>
-                                        <Input type="text" name="nom"
-                                            id="nom"
-                                            placeholder="Renseignez votre Nom et Prénom"
-                                            onChange={this.changeInput}
-                                        />
-                                    </FormGroup>
-                                    <FormGroup>
-                                        <Label className={this.state.class} for="email" >Email</Label>
-                                        <Input type="text" name="email" id="email"
-                                            placeholder="Votre email ici"
-                                            onChange={this.changeInput}
-                                        />
-                                    </FormGroup>
-                                    <FormGroup>
-                                        <Label for="personne">Nombres de voyageurs</Label>
-                                        <Input type="select" name="personne" id="personne">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5 ou + </option>
-                                        </Input>
-                                    </FormGroup>
-                                    <FormGroup>
-                                        <Label for="commentaire">Commentaires</Label>
-                                        <Input type="textarea" name="commentaire" id="commentaire" />
-                                    </FormGroup>
+                        <Form onSubmit={this.handleSubmit}>
 
-                                    <FormGroup>
-                                        <Label for="voyage">Numéro du Voyage</Label>
-                                        <Input type="idVoyage" name="voyage" id="voyage" placeholder='5830385' disabled />
-                                    </FormGroup>
-                                    <FormGroup check>
-                                        <Label check>
-                                            <Input
-                                                type="checkbox"
-                                                name='newsletter'
-                                            />{' '}
-                                            <div>Je souhaite m'inscrire à la newsletter.</div>
-                                        </Label>
-                                    </FormGroup>
-                                    <FormGroup check>
-                                        <Label check>
-                                            <Input
-                                                type="checkbox"
-                                                name='boutonCGV'
-                                                onClick={this.buttonCGV}
-                                                onChange={this.changeInput} />{' '}
-                                            <div className={this.state.class}>J'accepte les conditions générales de ventes.</div>
-                                        </Label>
-                                    </FormGroup>
-    
+                            <FormGroup>
+                                <Label className={this.state.class} for="nom" required>Nom et Prénom </Label>
+                                <Input 
+                                    type="text" 
+                                    name="nom"
+                                    id="nom"
+                                    placeholder="Renseignez votre Nom et Prénom"
+                                    onChange={this.handleChange}
+                                    value={this.state.nom}
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label className={this.state.class} for="email" >Email</Label>
+                                <Input 
+                                    type="email" 
+                                    name="email" 
+                                    id="email"
+                                    placeholder="Votre email ici"
+                                    onChange={this.handleChange}
+                                    value={this.state.email}
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="personne">Nombres de voyageurs</Label>
+                                <Input type="select" name="personne" id="personne" onChange={this.handleChange}>
+                                    <option value='1'>1</option>
+                                    <option value='2'>2</option>
+                                    <option value='3'>3</option>
+                                    <option value='4'>4</option>
+                                    <option value='5'>5 ou + </option>
+                                </Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="commentaire">Commentaires</Label>
+                                <Input 
+                                    type="textarea" 
+                                    name="commentaire" 
+                                    id="commentaire"
+                                    onChange={this.handleChange}
+                                    value = {this.state.commentaire}
+                                    />
+                            </FormGroup>
+
+                            <FormGroup check>
+                                <Label check>
+                                    <Input
+                                        type="checkbox"
+                                        name='newsletter'
+                                    />{' '}
+                                    <div>Je souhaite m'inscrire à la newsletter.</div>
+                                </Label>
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input
+                                        type="checkbox"
+                                        name='boutonCGV'
+                                       /*  onClick={this.buttonCGV} */
+                                        />{' '}
+                                    <div className={this.state.class}>J'accepte les conditions générales de ventes.</div>
+                                </Label>
+                            </FormGroup>
+                            <Button color="primary" /* onClick={this.alertForm} */>Valider</Button>
                         </Form>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.alertForm}>Valider</Button>{' '}
+                       {' '}
                         <Button color="secondary" onClick={this.toggle}>Annuler</Button>
                     </ModalFooter>
                 </Modal>

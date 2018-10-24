@@ -41,7 +41,8 @@ class DetailVoyage extends Component {
                 <Programme 
                 detail={this.state.voyage.detail}
                 />
-                <Formulaire />
+                <Formulaire
+                    id ={this.props.match.params.id} />
 
             </div>
         )

@@ -49,7 +49,7 @@ class AdminClient extends React.Component {
                                     <td>{client.email}</td>
                                     <td>{client.personne}</td>
                                     <td>{client.commentaire}</td>
-                                    <td>{client.voyage}</td>
+                                    <td>{client.title_voyage}</td>
                                 </tr>
                             )                   
                             )}
