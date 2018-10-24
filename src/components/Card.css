@@ -12,6 +12,7 @@
 
 .button {
     float: left;
+    margin-right: 5px;
 }
 
 .prix {

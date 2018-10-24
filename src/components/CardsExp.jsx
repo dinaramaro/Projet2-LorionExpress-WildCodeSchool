@@ -1,23 +1,25 @@
 import React from 'react';
-import { Card, CardBody, CardTitle, CardText, CardImg, Col} from 'reactstrap';
-import Bouton from './Bouton';
+import { Card, CardBody, CardTitle, CardText, CardImg, Col, Button } from 'reactstrap';
 import './Card.css';
+import {Link} from 'react-router-dom';
 
 const CardsExp = (props) => {
-      return (
+    return (
         <Col xs="12" sm="6" lg="4" className="pb-2">
             <Card>
                 <div className="image">
-                <CardImg top width="100%" src={props.photo} className="image-zoom"/>
+                    <CardImg top width="100%" src={props.image} className="image-zoom" />
                 </div>
                 <CardBody>
-                    <CardTitle>{props.theme}</CardTitle>
-                    <CardText>{props.cardtext}</CardText>
-                    <Bouton />
+                    <CardTitle>{props.title}</CardTitle>
+                    <CardText>{props.description}</CardText>
+                    <Link to={`/detailvoyage/${props.id}`}>
+                        <Button className="button">Plus d'infos</Button>
+                    </Link>
                 </CardBody>
             </Card>
         </Col>
-      );
-  }
+    );
+}
 
 export default CardsExp;
