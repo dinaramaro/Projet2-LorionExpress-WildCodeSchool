@@ -11,8 +11,6 @@ class AdminClient extends React.Component {
         }
     }
 
-
-
     componentDidMount() {
         fetch("http://92.175.11.66:3000/reacteurs/api/clients")
             .then(response => response.json())
@@ -21,10 +19,7 @@ class AdminClient extends React.Component {
             }))
     }
 
-
     render() {
-
-
         return (
             <div>
                 <div className="text-center">
@@ -32,14 +27,14 @@ class AdminClient extends React.Component {
                     <h2>Fichier clients</h2>
                 </div>
                 <Container>
-                    <Table>
+                    <Table bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Nom et Prénom</th>
                                 <th>E-mail</th>
                                 <th>Nombres de voyageurs</th>
                                 <th>Commentaires</th>
-                                <th>Numéro du voyage</th>
+                                <th>Voyage Réservé</th>
                             </tr>
                         </thead>
                         <tbody>

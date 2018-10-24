@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 import BtnNav from './BtnNav';
+import {withRouter} from 'react-router-dom';
 
 
 class CreationVoyage extends React.Component {
@@ -42,7 +43,7 @@ class CreationVoyage extends React.Component {
             if (res.error) {
                 alert(res.error)
             } else {
-                window.location.href="/admin"
+                this.props.history.push("/admin")
             }
         }).catch(e => {
             console.error(e);
@@ -107,7 +108,7 @@ class CreationVoyage extends React.Component {
 
                         <FormGroup>
                             <Label for="prix">Prix</Label>
-                            <Input onChange={this.handleChange} type="text" name="prix" id="prix" placeholder="999"
+                            <Input onChange={this.handleChange} type="number" name="prix" id="prix" placeholder="999"
                                 value={this.state.prix} />
                         </FormGroup>
 
@@ -128,6 +129,7 @@ class CreationVoyage extends React.Component {
                             <Input onChange={this.handleChange} type="select" name="type" id="type" placeholder="Destination" >
                                 <option value="destination" >Destination</option>
                                 <option value="experience">Experience</option>
+                                <option value="promotion">Promotion</option>
                             </Input>
                         </FormGroup>
                         <div className='text-center'>
@@ -140,5 +142,4 @@ class CreationVoyage extends React.Component {
     }
 }
 
-
-export default CreationVoyage;
+export default withRouter(CreationVoyage);
