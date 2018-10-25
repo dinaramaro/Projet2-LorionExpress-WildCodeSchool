@@ -1,29 +1,43 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import { Button } from 'reactstrap';
+import './SuppressionVoyage.css';
 
 class SuppressionVoyage extends Component {
 
-componentDidMount(){
-    fetch(`http://92.175.11.66:3000/reacteurs/api/voyages/${this.props.match.params.id}`, {
-        method : "delete",
-    }).then(res => res.text())
-    .then (res => {
-        if (res.error) {
-            alert(res.error)
-        } else {
-            alert ("Voyage supprimé")
-            window.location.href="/admin"
-        }
-    }).catch(e => {
-        console.error(e);
-        alert('Erreur lors de la suppression du voyage')
-    })
-}
+    cancel() {
+        this.props.history.push("/admin");
+    }
 
-    render () {
+    elimineVoyage() {
+        fetch(`http://92.175.11.66:3000/reacteurs/api/voyages/${this.props.match.params.id}`, {
+            method: "delete",
+        }).then(res => res.text())
+            .then(res => {
+                if (res.error) {
+                    alert(res.error)
+                } else {
+                    alert("Voyage supprimé")
+                    this.props.history.push("/admin")
+                }
+            }).catch(e => {
+                console.error(e);
+                alert('Erreur lors de la suppression du voyage')
+            })
+    }
+
+    render() {
         return (
-            <div>Suppression du voyage</div>
+            <div className="suppression">
+                <h1>Veuillez confirmer la suppression du voyage!</h1>
+                <p>&nbsp;</p>
+                <Button color="danger" onClick={() => this.elimineVoyage()}>Oui</Button>
+                <p>&nbsp;</p>
+                <Button color="success" onClick={() => this.cancel()}>Non</Button>
+                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+            </div>
         )
     }
 }
 
-export default SuppressionVoyage;
+export default withRouter(SuppressionVoyage); 

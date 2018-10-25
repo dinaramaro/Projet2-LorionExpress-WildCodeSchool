@@ -14,7 +14,7 @@ import {
 class Navbarvoyage extends Component {
    
   render() {
-    const {title, prix, type, datedepart, dateretour} = this.props
+    const {title, prix, datedepart, dateretour} = this.props
     return (
       <Container className="pad">
         <Navbar light expand="md nav" >
