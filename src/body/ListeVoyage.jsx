@@ -30,7 +30,7 @@ class ListeVoyage extends Component {
     return (
       <div>
         <Container className="cardsDes-box">
-          <h1 className='titreDes' id='destinations'>DESTINATIONS</h1>
+          <h1 className='titreDes mt-5' id='destinations'>DESTINATIONS</h1>
           <Row>
               {
                 this.state.voyage.filter(card => card.type === "destination").map(
@@ -55,7 +55,7 @@ class ListeVoyage extends Component {
           </Row>
         </Container>
         <Container className="cardsExp-box">
-          <h1 className='titreExp' id='experiences'>EXPERIENCES</h1>
+          <h1 className='titreExp mt-5' id='experiences'>EXPERIENCES</h1>
           <Row>
           {
                 this.state.voyage.filter(card => card.type === "experience").map(
