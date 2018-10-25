@@ -6,16 +6,19 @@ import {Link} from 'react-router-dom';
 const CardsExp = (props) => {
     return (
         <Col xs="12" sm="6" lg="4" className="pb-2">
-            <Card>
+            <Card className="shadow">
                 <div className="image">
                     <CardImg top width="100%" src={props.image} className="image-zoom" />
                 </div>
-                <CardBody>
-                    <CardTitle>{props.title}</CardTitle>
+                <CardBody className="pb-0">
+                    <CardTitle className="mt-1 titre">{props.title}</CardTitle>
                     <CardText>{props.description}</CardText>
-                    <Link to={`/detailvoyage/${props.id}`}>
-                        <Button className="button">Plus d'infos</Button>
-                    </Link>
+                    <div className="align-items-center">
+                        <Link to={`/detailvoyage/${props.id}`}>
+                            <Button className="button mr-5">Plus d'infos</Button> 
+                        </Link>
+                        <p className="prix">{props.prix} €</p>
+                        </div>
                 </CardBody>
             </Card>
         </Col>
