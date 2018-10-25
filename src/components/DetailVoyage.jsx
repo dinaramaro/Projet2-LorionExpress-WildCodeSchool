@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CarouselVoyage from './components-detailvoyage/CarouselVoyage';
+import PhotoVoyage from './components-detailvoyage/PhotoVoyage';
 import Navbarvoyage from './components-detailvoyage/Navbarvoyage';
 import Tips from './components-detailvoyage/Tips';
 import Programme from './components-detailvoyage/Programme';
@@ -27,7 +27,7 @@ class DetailVoyage extends Component {
     render () {
         return (
             <div>
-                {/* <CarouselVoyage image={this.state.voyage.image}/> */}
+                <PhotoVoyage image={this.state.voyage.image} />
                 <Navbarvoyage 
                 title={this.state.voyage.title}
                 datedepart={this.state.voyage['date-depart']}
