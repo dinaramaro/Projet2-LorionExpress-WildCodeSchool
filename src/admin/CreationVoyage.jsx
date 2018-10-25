@@ -43,6 +43,7 @@ class CreationVoyage extends React.Component {
             if (res.error) {
                 alert(res.error)
             } else {
+                alert('Le voyage a été créé dans le catalogue');
                 this.props.history.push("/admin")
             }
         }).catch(e => {
@@ -95,13 +96,13 @@ class CreationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="date-depart">Date de départ</Label>
+                            <Label for="date-depart">Date de départ (YYYY-MM-DD)</Label>
                             <Input onChange={this.handleChange} type="text" name="date-depart" id="date-depart" placeholder="2018-09-18"
                                 value={this.state["date-depart"]} />
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="date-retour">Date de retour</Label>
+                            <Label for="date-retour">Date de retour (YYYY-MM-DD)</Label>
                             <Input onChange={this.handleChange} type="text" name="date-retour" id="date-retour" placeholder="2018-09-22"
                                 value={this.state["date-retour"]} />
                         </FormGroup>
@@ -127,6 +128,7 @@ class CreationVoyage extends React.Component {
                         <FormGroup>
                             <Label for="type">Type</Label>
                             <Input onChange={this.handleChange} type="select" name="type" id="type" placeholder="Destination" >
+                                <option>Sélectionner le type de voyage</option>
                                 <option value="destination" >Destination</option>
                                 <option value="experience">Experience</option>
                                 <option value="promotion">Promotion</option>

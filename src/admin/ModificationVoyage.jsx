@@ -42,6 +42,7 @@ class ModificationVoyage extends React.Component {
             if (res.error) {
                 alert(res.error)
             } else {
+                alert('Voyage correctement modifié');
                 this.props.history.push("/admin")
             }
         }).catch(e => {
@@ -113,13 +114,13 @@ class ModificationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="date-depart">Date de départ</Label>
+                            <Label for="date-depart">Date de départ (YYYY-MM-DD)</Label>
                             <Input onChange={this.handleChange} type="text" name="date-depart" id="date-depart" 
                                 value={this.state["date-depart"]} />
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="date-retour">Date de retour</Label>
+                            <Label for="date-retour">Date de retour (YYYY-MM-DD)</Label>
                             <Input onChange={this.handleChange} type="text" name="date-retour" id="date-retour" 
                                 value={this.state["date-retour"]} />
                         </FormGroup>
@@ -145,6 +146,7 @@ class ModificationVoyage extends React.Component {
                         <FormGroup>
                             <Label for="type">Type</Label>
                             <Input onChange={this.handleChange} type="select" name="type" id="type" placeholder="Destination" >
+                                <option>Sélectionner le type de voyage</option>
                                 <option value="destination" >Destination</option>
                                 <option value="experience">Experience</option>
                                 <option value="promotion">Promotion</option>
