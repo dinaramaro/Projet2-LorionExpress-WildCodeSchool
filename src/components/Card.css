@@ -1,5 +1,4 @@
 
-
 .image {
     overflow: hidden;
     }
@@ -16,7 +15,14 @@
 }
 
 .prix {
-    padding-top: 5px;
     font-style: italic;
+    color : rgb(104, 15, 15);
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+.titre{
+    font-size: 1.75em;
+    font-weight: bold;
 }
 
