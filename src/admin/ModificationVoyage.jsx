@@ -114,13 +114,13 @@ class ModificationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="date-depart">Date de départ (YYYY-MM-DD)</Label>
+                            <Label for="date-depart">Date de départ (AAAA-MM-JJ)</Label>
                             <Input onChange={this.handleChange} type="text" name="date-depart" id="date-depart" 
                                 value={this.state["date-depart"]} />
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="date-retour">Date de retour (YYYY-MM-DD)</Label>
+                            <Label for="date-retour">Date de retour (AAAA-MM-JJ)</Label>
                             <Input onChange={this.handleChange} type="text" name="date-retour" id="date-retour" 
                                 value={this.state["date-retour"]} />
                         </FormGroup>
