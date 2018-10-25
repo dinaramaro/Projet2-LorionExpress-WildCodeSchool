@@ -71,6 +71,7 @@ class Formulaire extends Component {
                                     placeholder="Renseignez votre Nom et Prénom"
                                     onChange={this.handleChange}
                                     value={this.state.nom}
+                                    required
                                 />
                             </FormGroup>
                             <FormGroup>
@@ -82,6 +83,7 @@ class Formulaire extends Component {
                                     placeholder="Votre email ici"
                                     onChange={this.handleChange}
                                     value={this.state.email}
+                                    required
                                 />
                             </FormGroup>
                             <FormGroup>
@@ -90,6 +92,7 @@ class Formulaire extends Component {
                                        name="personne" 
                                        id="personne" 
                                        onChange={this.handleChange}
+                                       required
                                        >
                                     <option value=""></option>
                                     <option value="1">1</option>
@@ -129,6 +132,7 @@ class Formulaire extends Component {
                                     <Input
                                         type="checkbox"
                                         name='boutonCGV'
+                                        required
                                     />
                                     <div>J'accepte les conditions générales de ventes.</div>
                                 </Label>
