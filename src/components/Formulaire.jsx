@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, Container, Modal, ModalBody, ModalFooter, } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container, Modal, ModalBody } from 'reactstrap';
 import './Formulaire.css';
 import { withRouter } from 'react-router-dom';
 
@@ -12,13 +12,9 @@ class Formulaire extends Component {
             personne: "",
             commentaire: "",
             voyage: this.props.id,
-            /*  boutonCGV: false, */
             modal: false,
-            class: ''
         }
-        /* this.alertForm = this.alertForm.bind(this); */
         this.handleChange = this.handleChange.bind(this);
-        /*   this.buttonCGV = this.buttonCGV.bind(this); */
         this.toggle = this.toggle.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -31,30 +27,6 @@ class Formulaire extends Component {
         });
     }
 
-
-    /*   alertForm() {
-          if (this.state.name.length > 0 && this.state.email.length > 0 && !this.state.boutonCGV === false) {
-              let message = "Votre réservation a bien été prise en compte, merci.";
-              this.setState({
-                  class: '',
-                  modal: !this.state.modal
-              })
-              alert(message)
-          } else {
-              this.setState({
-                  class: 'red'
-              })
-              let message = 'Merci de remplir tout les champs obligatoires';
-              alert(message)
-          }
-      } */
-
-    /*   buttonCGV() {
-          this.setState({
-              boutonCGV: !this.state.bouttonCGV
-          })
-      }
-   */
     handleChange(event) {
         this.setState({ [event.target.name]: event.target.value })
     }
@@ -72,7 +44,7 @@ class Formulaire extends Component {
                 if (res.error) {
                     console.log(res.error);
                 } else {
-                    alert(`Client enregistré!`);
+                    alert(`Votre voyage a bien été enregistré !`);
                     this.props.history.push("/");
                 }
             }).catch(e => {
@@ -83,7 +55,7 @@ class Formulaire extends Component {
 
     render() {
         return (
-            <Container>
+            <Container className="mt-0 mb-0">
                 <div className='center'>
                     <Button color="success" onClick={this.toggle}>Je réserve</Button>
                 </div>
@@ -91,7 +63,7 @@ class Formulaire extends Component {
                     <ModalBody>
                         <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
-                                <Label className={this.state.class} for="nom" required>Nom et Prénom </Label>
+                                <Label for="nom">Nom et Prénom </Label>
                                 <Input
                                     type="text"
                                     name="nom"
@@ -102,7 +74,7 @@ class Formulaire extends Component {
                                 />
                             </FormGroup>
                             <FormGroup>
-                                <Label className={this.state.class} for="email" >Email</Label>
+                                <Label for="email" >Email</Label>
                                 <Input
                                     type="email"
                                     name="email"
@@ -114,7 +86,12 @@ class Formulaire extends Component {
                             </FormGroup>
                             <FormGroup>
                                 <Label for="personne">Nombres de voyageurs</Label>
-                                <Input type="select" name="personne" id="personne" onChange={this.handleChange}>
+                                <Input type="select" 
+                                       name="personne" 
+                                       id="personne" 
+                                       onChange={this.handleChange}
+                                       >
+                                    <option value=""></option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -152,18 +129,14 @@ class Formulaire extends Component {
                                     <Input
                                         type="checkbox"
                                         name='boutonCGV'
-                                    /*  onClick={this.buttonCGV} */
                                     />
-                                    <div className={this.state.class}>J'accepte les conditions générales de ventes.</div>
+                                    <div>J'accepte les conditions générales de ventes.</div>
                                 </Label>
                             </FormGroup>
-                            <Button color="primary" /* onClick={this.alertForm} */>Valider</Button>
+                            <Button color="primary m-2">Valider</Button>{' '}
+                            <Button color="secondary m-2" onClick={this.toggle}>Annuler</Button>
                         </Form>
                     </ModalBody>
-                    <ModalFooter>
-
-                        <Button color="secondary" onClick={this.toggle}>Annuler</Button>
-                    </ModalFooter>
                 </Modal>
             </Container>
 
