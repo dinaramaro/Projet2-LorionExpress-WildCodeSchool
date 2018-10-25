@@ -9,7 +9,7 @@ class ContactSection extends Component {
             <section id="contact">
                 <Container>
                     <hr />
-                    <Row className="align-items-center">
+                    <Row className="align-items-center font2">
                         <Col md="6">
                             <h2>Lorion'Express</h2>
 

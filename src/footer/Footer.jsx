@@ -7,7 +7,7 @@ class Footer extends Component {
         return (
             <div className='marge'>
                 <Container fluid >
-                    <Row className='footer'>
+                    <Row className='footer font2'>
                         <Col lg="2" md='6' sm="6" xs="12">
                             <ul className="list">
                                 <li className="list-top">Sections</li>

@@ -135,7 +135,7 @@ class CreationVoyage extends React.Component {
                             </Input>
                         </FormGroup>
                         <div className='text-center'>
-                            <Button color="primary">Créer</Button>
+                            <Button color="primary font2">Créer</Button>
                         </div>
                     </Form>
                 </Container>

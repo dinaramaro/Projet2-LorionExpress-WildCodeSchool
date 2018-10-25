@@ -153,7 +153,7 @@ class ModificationVoyage extends React.Component {
                             </Input>
                         </FormGroup>
                         <div className='text-center'>
-                            <Button color="primary">Modifier</Button>
+                            <Button color="primary font2">Modifier</Button>
                         </div>
                     </Form>
         </Container>

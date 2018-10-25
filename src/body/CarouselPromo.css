@@ -1,0 +1,18 @@
+.div {
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+ 
+.photo {
+    height: 1080px;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+
+}
+
+.font1 {
+    font-family : "Playfair";
+    font-weight : bold;
+}

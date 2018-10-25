@@ -31,7 +31,7 @@ class Admin extends Component {
                 <div className="text-center">
                     <BtnNav />
                     <h2>Voyages</h2>
-                    <Link to="/admincreation-voyage"><Button color="secondary" size="lg">Ajouter un voyage</Button></Link>
+                    <Link to="/admincreation-voyage"><Button color="secondary" size="lg" className="font2">Ajouter un voyage</Button></Link>
                 </div>
 
                 <div>

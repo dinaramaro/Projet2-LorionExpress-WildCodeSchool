@@ -9,7 +9,7 @@ export default class BarreRecherche extends React.Component {
                 <Container>
                     <Row form>
                         <Col>
-                            <Form inline className="justify-content-center">
+                            <Form inline className="justify-content-center font2">
                                 <FormGroup className="mb-2 mr-sm-2 mb-sm-2">
                                     <Input type="text" name="destination" id="destination" placeholder="Destination" />
                                 </FormGroup>

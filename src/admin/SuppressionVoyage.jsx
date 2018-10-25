@@ -43,10 +43,10 @@ class SuppressionVoyage extends Component {
                 <p>&nbsp;</p>
                 <Row>
                     <Col>
-                        <Button className="mb-2" color="danger" size="lg" onClick={() => this.elimineVoyage()}>Oui</Button>
+                        <Button className="mb-2 font2" color="danger" size="lg" onClick={() => this.elimineVoyage()}>Oui</Button>
                     </Col>
                     <Col>
-                        <Button color="success" size="lg" onClick={() => this.cancel()}>Non</Button>
+                        <Button className="font2" color="success" size="lg" onClick={() => this.cancel()}>Non</Button>
                     </Col>
                 </Row>
                 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
