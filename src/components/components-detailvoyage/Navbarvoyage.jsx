@@ -26,7 +26,7 @@ class Navbarvoyage extends Component {
             <div className="center price">{prix} €</div>
           </Col>
           <Col lg="3" sm="6">
-            <Formulaire />
+            <Formulaire id={this.props.id}/>
           </Col>
         </Row>
       </Container>

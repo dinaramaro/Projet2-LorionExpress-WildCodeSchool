@@ -34,6 +34,7 @@ class DetailVoyage extends Component {
                 dateretour={this.state.voyage['date-retour']}
                 prix={this.state.voyage.prix}
                 type={this.state.voyage.type}
+                id ={this.props.match.params.id}
                 />
                 <Tips 
                 astuces = {this.state.voyage.astuces}
@@ -42,7 +43,7 @@ class DetailVoyage extends Component {
                 detail={this.state.voyage.detail}
                 />
                 <Formulaire
-                    id ={this.props.match.params.id} />
+                    id ={this.props.match.params.id}/>
 
             </div>
         )
