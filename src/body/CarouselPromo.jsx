@@ -6,7 +6,6 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-
 } from 'reactstrap';
 import './CarouselPromo.css';
 
@@ -61,14 +60,14 @@ class CarouselPromo extends React.Component {
     const items1 = this.state.promo.filter(item => item.type === "promotion");
     const slides = items1.map((item) => {
       return (
-        <CarouselItem className="div"
+        <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.id}
         >
-          <img className="img-fluid photo" src={item.image} alt={item.description} />
+          <img className="img-fluid" src={item.image} alt={item.description} />
           <Link to={`/detailvoyage/${item.id}`}>
-            <CarouselCaption className="font1" captionHeader={item.title} />
+            <CarouselCaption captionHeader={item.description} />
           </Link>
 
         </CarouselItem>

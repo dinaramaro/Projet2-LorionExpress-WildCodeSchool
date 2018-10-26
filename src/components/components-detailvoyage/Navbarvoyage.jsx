@@ -14,7 +14,7 @@ class Navbarvoyage extends Component {
   render() {
     const { title, prix, datedepart, dateretour } = this.props
     return (
-      <Container className="pad">
+      <Container className="pad mb-4">
         <Row>
           <Col lg="3" sm="6">
             <div className="center title brand">{title}</div>

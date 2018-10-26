@@ -2,6 +2,7 @@
     text-align: center;
     border: 2px solid #760063;
     border-radius : 3px;
+    margin-top : 15px;
     margin-bottom : 15px;
     padding: 10px;
     color: white;
@@ -14,6 +15,7 @@
     text-align: center;
     border: 2px solid #91AA12;
     border-radius : 3px;
+    margin-top : 15px;
     margin-bottom : 15px;
     padding: 10px;
     color: white;

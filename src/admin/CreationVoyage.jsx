@@ -84,13 +84,13 @@ class CreationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="description">Description</Label>
+                            <Label for="description">Résumé</Label>
                             <Input onChange={this.handleChange} type="textarea" name="description" id="description" placeholder="description"
                                 value={this.state.description} />
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="detail">Details</Label>
+                            <Label for="detail">Description détaillée</Label>
                             <Input onChange={this.handleChange} type="textarea" name="detail" id="detail" placeholder="Detail"
                                 value={this.state.detail} />
                         </FormGroup>
@@ -114,7 +114,7 @@ class CreationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="astuces">Astuces</Label>
+                            <Label for="astuces">Recommandations</Label>
                             <Input onChange={this.handleChange} type="textarea" name="astuces" id="astuces" placeholder="Visitez la plage de sable fin"
                                 value={this.state.astuces} />
                         </FormGroup>
@@ -126,7 +126,7 @@ class CreationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="type">Type</Label>
+                            <Label for="type">Type de voyage</Label>
                             <Input onChange={this.handleChange} type="select" name="type" id="type" placeholder="Destination" >
                                 <option>Sélectionner le type de voyage</option>
                                 <option value="destination" >Destination</option>
@@ -135,7 +135,7 @@ class CreationVoyage extends React.Component {
                             </Input>
                         </FormGroup>
                         <div className='text-center'>
-                            <Button color="primary font2">Créer</Button>
+                            <Button color="primary font2" className="mb-3">Créer</Button>
                         </div>
                     </Form>
                 </Container>

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import BtnNav from './BtnNav';
 import AdminCardsExp from './AdminCardsExp';
 import AdminCardsDestination from './AdminCardsDestination';
-import './Admin.css';
 
 class Admin extends Component {
     constructor(props) {
@@ -30,7 +29,7 @@ class Admin extends Component {
             <div>
                 <div className="text-center">
                     <BtnNav />
-                    <h2>Voyages</h2>
+                    <h2 className="mb-4">Voyages</h2>
                     <Link to="/admincreation-voyage"><Button color="secondary" size="lg" className="font2">Ajouter un voyage</Button></Link>
                 </div>
 
