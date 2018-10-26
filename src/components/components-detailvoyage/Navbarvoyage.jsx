@@ -10,12 +10,6 @@ import Moment from 'react-moment';
 import "moment-timezone";
 
 class Navbarvoyage extends Component {
-  constructor(props){
-    super(props);
-      this.state={
-        
-      }
-  }
 
   render() {
     const { title, prix, datedepart, dateretour } = this.props
