@@ -57,7 +57,7 @@ class Formulaire extends Component {
         return (
             <Container className="mt-0 mb-0">
                 <div className='center'>
-                    <Button color="success" onClick={this.toggle}>Je réserve</Button>
+                    <Button color="success" onClick={this.toggle} className="mt-2 mb-2">Je réserve</Button>
                 </div>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalBody>

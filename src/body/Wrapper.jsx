@@ -11,9 +11,11 @@ class Wrapper extends Component {
     render() {
         return (
             <div>
-                <CarouselPromo />
+                <section id="promotions">
+                    <CarouselPromo />
+                </section>
                 <ListeVoyage />
-                <ContactSection />          
+                <ContactSection />
             </div>
         );
     }

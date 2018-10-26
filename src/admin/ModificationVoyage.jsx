@@ -102,13 +102,13 @@ class ModificationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="description">Description</Label>
+                            <Label for="description">Résumé</Label>
                             <Input onChange={this.handleChange} type="textarea" name="description" id="description" 
                                 value={this.state.description} />
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="detail">Details</Label>
+                            <Label for="detail">Description détaillée</Label>
                             <Input onChange={this.handleChange} type="textarea" name="detail" id="detail" 
                                 value={this.state.detail} />
                         </FormGroup>
@@ -132,7 +132,7 @@ class ModificationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="astuces">Astuces</Label>
+                            <Label for="astuces">Recommandations</Label>
                             <Input onChange={this.handleChange} type="textarea" name="astuces" id="astuces" 
                                 value={this.state.astuces} />
                         </FormGroup>
@@ -144,7 +144,7 @@ class ModificationVoyage extends React.Component {
                         </FormGroup>
 
                         <FormGroup>
-                            <Label for="type">Type</Label>
+                            <Label for="type">Type de voyage</Label>
                             <Input onChange={this.handleChange} type="select" name="type" id="type" placeholder="Destination" >
                                 <option>Sélectionner le type de voyage</option>
                                 <option value="destination" >Destination</option>
@@ -153,7 +153,7 @@ class ModificationVoyage extends React.Component {
                             </Input>
                         </FormGroup>
                         <div className='text-center'>
-                            <Button color="primary font2">Modifier</Button>
+                            <Button color="primary font2" className="mb-3">Modifier</Button>
                         </div>
                     </Form>
         </Container>
