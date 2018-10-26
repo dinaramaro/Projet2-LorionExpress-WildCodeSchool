@@ -1,19 +1,23 @@
 .titreDes{
     text-align: center;
-    border: 2px solid rgb(37,194,233);
+    border: 2px solid #760063;
     border-radius : 3px;
     margin-bottom : 15px;
     padding: 10px;
     color: white;
-    background-color: rgb(37,194,233);
+    background-color: #760063;
+    font-family : "Roboto";
+    font-weight: bold;
 }
 
 .titreExp{
     text-align: center;
-    border: 2px solid rgb(124, 32, 167);
+    border: 2px solid #91AA12;
     border-radius : 3px;
     margin-bottom : 15px;
     padding: 10px;
     color: white;
-    background-color: rgb(124, 32, 167);
+    background-color: #91AA12;
+    font-family : "Roboto";
+    font-weight: bold;
 }

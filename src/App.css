@@ -3,3 +3,21 @@
   color: rgb(17, 87, 119);
   margin-left: 50%;
 }
+
+@font-face {
+  font-family: "Roboto";
+  font-style : regular;
+  src : url("https://fonts.gstatic.com/s/robotocondensed/v16/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2");
+}
+
+@font-face {
+  font-family: "Playfair";
+
+  src : url("https://fonts.gstatic.com/s/playfairdisplay/v13/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2");
+}
+
+.App {
+  font-family : "Playfair";
+}
+
+

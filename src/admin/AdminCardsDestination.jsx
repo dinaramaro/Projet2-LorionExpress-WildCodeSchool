@@ -12,7 +12,7 @@ const AdminCardsDestination = (props) => {
   return (
   <Col xs="12" md="6" lg="4" className="pt-2 pb-2">
     <Card className="text-center">
-      <CardTitle>{props.title}</CardTitle>
+      <CardTitle className="titre">{props.title}</CardTitle>
       <CardSubtitle>Du <Moment format="DD/MM/YYYY">{props.datedepart}</Moment> au <Moment format="DD/MM/YYYY">{props.dateretour}</Moment></CardSubtitle>
       
         <div className="image">
@@ -22,10 +22,10 @@ const AdminCardsDestination = (props) => {
       <CardBody h-100>
         <CardText className="text-left">{props.description}</CardText>
         <Link to={`/adminmodification-voyage/${props.id}`}>
-        <Button className="button" color="primary">Modifier</Button> 
+        <Button className="button font2" color="primary">Modifier</Button> 
         </Link>
         <Link to={`/adminsuppression-voyage/${props.id}`}>
-        <Button className="button" color="danger">Supprimer</Button> 
+        <Button className="button font2" color="danger">Supprimer</Button> 
         </Link>
       </CardBody>
     </Card>

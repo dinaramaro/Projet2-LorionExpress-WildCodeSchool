@@ -15,7 +15,7 @@ const CardsExp = (props) => {
                     <CardText>{props.description}</CardText>
                     <div className="align-items-center">
                         <Link to={`/detailvoyage/${props.id}`}>
-                            <Button className="button mr-5">Plus d'infos</Button> 
+                            <Button className="button mr-5 font2">Plus d'infos</Button> 
                         </Link>
                         <p className="prix">{props.prix} €</p>
                         </div>

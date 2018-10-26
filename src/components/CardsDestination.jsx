@@ -23,7 +23,7 @@ const CardsDestination = (props) => {
         <CardText className="text-left">{props.description}</CardText>
         <div className="align-items-center">
           <Link to={`/detailvoyage/${props.id}`}>
-            <Button className="button" color="info">Plus d'infos</Button> 
+            <Button className="button font2" color="info">Plus d'infos</Button> 
           </Link>
         <p className="prix">{props.prix} €</p>
         </div>
