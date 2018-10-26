@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Container } from 'reactstrap';
+import {Link} from 'react-router-dom';
 import BtnNav from './BtnNav';
 
 
@@ -44,7 +45,10 @@ class AdminClient extends React.Component {
                                     <td>{client.email}</td>
                                     <td>{client.personne}</td>
                                     <td>{client.commentaire}</td>
-                                    <td>{client.title_voyage}</td>
+                                    <td>
+                                        <Link to={`/detailvoyage/${client.voyage}`} target="_blank">
+                                        {client.title_voyage}</Link>
+                                    </td>
                                 </tr>
                             )                   
                             )}
