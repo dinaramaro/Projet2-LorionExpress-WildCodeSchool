@@ -65,8 +65,9 @@ class CarouselPromo extends React.Component {
           onExited={this.onExited}
           key={item.id}
         >
+         <Link to={`/detailvoyage/${item.id}`}>
           <img className="img-fluid" src={item.image} alt={item.description} />
-          <Link to={`/detailvoyage/${item.id}`}>
+         
             <CarouselCaption captionHeader={item.description} />
           </Link>
 
