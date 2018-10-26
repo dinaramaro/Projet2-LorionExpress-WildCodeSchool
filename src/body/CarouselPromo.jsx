@@ -8,6 +8,7 @@ import {
   CarouselCaption,
 
 } from 'reactstrap';
+import './CarouselPromo.css';
 
 class CarouselPromo extends React.Component {
   constructor(props) {
