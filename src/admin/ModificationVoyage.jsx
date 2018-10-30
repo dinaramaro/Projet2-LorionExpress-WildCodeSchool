@@ -72,7 +72,6 @@ class ModificationVoyage extends React.Component {
 
 
   render() {
-      console.log(this.state.voyage)
     return (
         <div>
             <div className="text-center">
