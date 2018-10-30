@@ -20,9 +20,9 @@ class Footer extends Component {
                         <Col lg="2" md='6' sm="6" xs="12">
                             <ul className="list">
                                 <li className="list-top">Réseaux sociaux</li>
-                                <a href="https://www.facebook.com/wildcodeschool/" target="_blank" rel="noopener noreferrer"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539170706-facebook.png" alt="Logo" /></a>
-                                <a href="https://twitter.com/wildcodeschool" target="_blank" rel="noopener noreferrer"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539166418-twitter.png" alt="Logo" /></a>
-                                <a href="https://www.instagram.com/wildcodeschool/?hl=fr" target="_blank" rel="noopener noreferrer"><img src="http://image.noelshack.com/fichiers/2018/41/3/1539170468-instagram.png" alt="Logo" /></a>
+                                <a href="https://www.facebook.com/wildcodeschool/" target="_blank" rel="noopener noreferrer"><img src="http://image.noelshack.com/fichiers/2018/44/2/1540894037-1539170706-facebook.png" alt="Logo" /></a>
+                                <a href="https://twitter.com/wildcodeschool" target="_blank" rel="noopener noreferrer"><img src="http://image.noelshack.com/fichiers/2018/44/2/1540894124-1539166418-twitter.png" alt="Logo" /></a>
+                                <a href="https://www.instagram.com/wildcodeschool/?hl=fr" target="_blank" rel="noopener noreferrer"><img src="http://image.noelshack.com/fichiers/2018/44/2/1540894201-1539170468-instagram.png" alt="Logo" /></a>
                             </ul>
                         </Col>
 

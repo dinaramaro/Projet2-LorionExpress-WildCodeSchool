@@ -68,7 +68,9 @@ class CarouselPromo extends React.Component {
          <Link to={`/detailvoyage/${item.id}`}>
           <img className="img-fluid" src={item.image} alt={item.description} />
          
-            <CarouselCaption captionHeader={item.description} />
+            <CarouselCaption className="caption" captionHeader={item.description} />
+            <CarouselCaption className="barre align-items-center" captionHeader="&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Promotion"/>
+
           </Link>
 
         </CarouselItem>
