@@ -36,15 +36,6 @@ class NavBar extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink className="text-light" href="/reacteurs/#destinations">Destinations</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="text-light" href="/reacteurs/#experiences">Expériences</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="text-light" href="/reacteurs/#promotions">Promotions</NavLink>
-              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle className="text-light" nav caret>
                 ☎
