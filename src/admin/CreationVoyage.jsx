@@ -29,7 +29,7 @@ class CreationVoyage extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const url = "http://92.175.11.66:3000/reacteurs/api/voyages";
+        const url = "http://campus-bordeaux.ovh:3002/reacteurs/api/voyages";
         const config = {
             method: "POST",
             headers: {

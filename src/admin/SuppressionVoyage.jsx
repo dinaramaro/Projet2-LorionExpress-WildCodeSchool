@@ -14,7 +14,7 @@ class SuppressionVoyage extends Component {
     }
 
     elimineVoyage() {
-        fetch(`http://92.175.11.66:3000/reacteurs/api/voyages/${this.props.match.params.id}`, {
+        fetch(`http://campus-bordeaux.ovh:3002/reacteurs/api/voyages/${this.props.match.params.id}`, {
             method: "DELETE",
 
         }).then(res => res.text())

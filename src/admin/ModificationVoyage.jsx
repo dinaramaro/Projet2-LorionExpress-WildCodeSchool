@@ -36,7 +36,7 @@ class ModificationVoyage extends React.Component {
             },
             body: JSON.stringify(this.state)
         }
-        fetch(`http://92.175.11.66:3000/reacteurs/api/voyages/${this.props.match.params.id}`, config)
+        fetch(`http://campus-bordeaux.ovh:3002/reacteurs/api/voyages/${this.props.match.params.id}`, config)
         .then (res => res.text())
         .then (res => {
             if (res.error) {
@@ -53,7 +53,7 @@ class ModificationVoyage extends React.Component {
 
     componentDidMount(){
         window.scrollTo(0,0);
-        fetch(`http://92.175.11.66:3000/reacteurs/api/voyages/${this.props.match.params.id}`)
+        fetch(`http://campus-bordeaux.ovh:3002/reacteurs/api/voyages/${this.props.match.params.id}`)
             .then(response => response.json())
                 .then(data => 
                     this.setState({

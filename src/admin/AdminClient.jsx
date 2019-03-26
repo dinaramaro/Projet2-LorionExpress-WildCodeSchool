@@ -13,7 +13,7 @@ class AdminClient extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://92.175.11.66:3000/reacteurs/api/clients")
+        fetch("http://campus-bordeaux.ovh:3002/reacteurs/api/clients")
             .then(response => response.json())
             .then(data => this.setState({
                 client: data,

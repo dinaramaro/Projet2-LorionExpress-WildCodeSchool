@@ -32,7 +32,7 @@ class NavBar extends React.Component {
     return (
       <div className=" espace ">
         <Navbar fixed="top" className="colornav tailleText" dark expand="md">
-          <NavbarBrand href="/"><img className="pr-3" src="http://image.noelshack.com/fichiers/2018/44/2/1540892331-logo1.png" alt="Logo"/>Lorion'Express !</NavbarBrand>
+          <NavbarBrand href="/reacteurs"><img className="pr-3" src="http://image.noelshack.com/fichiers/2018/44/2/1540892331-logo1.png" alt="Logo"/>Lorion'Express !</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

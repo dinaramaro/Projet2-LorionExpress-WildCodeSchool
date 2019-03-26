@@ -16,7 +16,7 @@ class ListeVoyage extends Component {
 
 
   componentDidMount(){
-      fetch("http://92.175.11.66:3000/reacteurs/api/voyages")
+      fetch("http://campus-bordeaux.ovh:3002/reacteurs/api/voyages")
         .then(response => response.json())
           .then(data => 
             this.setState({

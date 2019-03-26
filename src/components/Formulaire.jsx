@@ -33,7 +33,7 @@ class Formulaire extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        fetch("http://92.175.11.66:3000/reacteurs/api/clients", {
+        fetch("http://campus-bordeaux.ovh:3002/reacteurs/api/clients", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
